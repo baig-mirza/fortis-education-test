@@ -1,0 +1,543 @@
+/* Colors & base */
+:root{
+  --blue:#1b1f28;   /* dark blue */
+  --olive:#d7bc1e;  /* accent */
+  --text:#1b1f28;
+  --bg:#ffffff;
+  --soft:#f6f7fb;
+  --radius:12px;
+  --border:#e9eef5;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text); background:var(--bg); line-height:1.6;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,90%);margin-inline:auto}
+.sr-only{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.skip-link{position:absolute;left:-9999px}
+.skip-link:focus{left:16px;top:16px;background:#000;color:#fff;padding:8px 12px;border-radius:8px;z-index:1000}
+
+/* Type */
+h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10px}
+
+/* Buttons */
+.btn
+{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 25px;
+    border-radius:25px;
+    border:1px solid var(--border);
+}
+.btn--primary
+{
+    background:var(--olive);
+    border-color:var(--olive);
+    color:#fff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+.btn--primary:hover{filter:brightness(.95)}
+.btn--ghost
+{
+  background:#fff;
+  color: #1b1f28;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.btn--ghost:hover{background:#f2f4f8}
+
+/* Announcement Bar */
+.announcement
+{
+    background:var(--blue);
+    color:#d7bc1e;
+    text-align:center;
+    padding:8px;
+    font-family: "Libre Baskerville", serif;
+    font-weight:600;
+    font-size:1rem;
+}
+
+/* Header */
+.header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid var(--border)}
+.header__row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+.brand__logo{height:150px}
+
+
+/* hamburger icon default */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2000;
+}
+
+.burger__bar,
+.burger__bar::before,
+.burger__bar::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 24px;
+  background: var(--text);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.burger__bar::before { top: -7px; }
+.burger__bar::after { top: 7px; }
+
+/* X animation */
+.burger.active .burger__bar {
+  background: transparent;
+}
+.burger.active .burger__bar::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.burger.active .burger__bar::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+
+.nav{display:flex}
+.nav__list{display:flex;align-items:center;gap:16px;list-style:none;margin:0;padding:0}
+.nav__link
+{
+    padding:8px 6px;
+    border-radius:8px;
+    font-size: 25px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+}
+.subject-button
+{
+    font-size: 25px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: bolder;
+}
+/* making the subjects inside subject button without the text-decoration */
+.submenu
+{
+    text-decoration: none;
+    list-style: none;
+}
+/* Full-bleed hero background */
+.hero {
+  position: relative;
+  padding: 80px 0; /* controls height */
+  background: center/cover no-repeat url('images/Screenshot\ 2025-10-28\ at\ 11.55.12\ am.png'); /* update path */
+  color: #1b1f28;
+  min-height: 500px;;
+}
+
+/* optional soft overlay if text needs more contrast */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15); /* tweak opacity as needed */
+}
+
+/* make sure content sits above overlay */
+.hero__wrap {
+  position: relative;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 18px;
+  padding: 60px 0;
+}
+
+.hero__title {
+  font-family: "Libre Baskerville", serif;
+  font-size: clamp(1.8rem, 3.4vw, 3rem);
+  color: #fff; /* white text over image */
+}
+
+
+.hero__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+/* Dropdown (Subjects) */
+.has-submenu{position:relative}
+.nav__link--button{display:inline-flex;align-items:center;gap:6px;background:transparent;border:0;font:inherit;cursor:pointer;padding:8px 6px;border-radius:8px}
+.submenu{
+  position:absolute;top:calc(100% + 8px);left:0;min-width:200px;
+  background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.08);
+  padding:6px;display:none;
+}
+.submenu a{display:block;padding:10px 12px;border-radius:8px}
+.submenu a:hover{background:var(--soft)}
+
+/* Hover open on desktop */
+@media (hover:hover){
+  .has-submenu:hover .submenu,
+  .has-submenu:focus-within .submenu{display:block}
+}
+
+/* HERO — centered */
+.hero{padding:56px 0}
+.hero__wrap{
+  text-align:center;
+  display:grid; gap:16px; justify-items:center;
+}
+.hero__title
+{
+    font-size:clamp(1.8rem,3.4vw,3rem);
+    font-family:"Libre Baskerville",serif;
+    background-color: #fff;
+    color: #d7bc1e;
+    padding: 20px 60px;
+    border-radius: 20px;
+}
+.hero__subtitle{max-width:60ch; color:#5f6b81}
+.hero__actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.hero__image img{border-radius:var(--radius); border:1px solid var(--border)}
+
+/* === Seamless features section under hero === */
+.pillars{
+  background: var(--blue);      /* same dark background as screenshot */
+  padding: 32px 0 44px;         /* inner spacing only */
+  margin-top: 0;                /* ensure no gap from hero */
+}
+
+/* kill any bottom padding on hero to make it seamless */
+.hero{ margin-bottom:0; }       /* your hero already has padding; no margin gap */
+
+/* grid */
+.pillars__grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 100px;
+  align-items: center;
+}
+
+/* circular gold badges */
+.pillar__badge{
+  width: 280px;                 /* adjust to match your design */
+  height: 280px;
+  margin-inline: auto;
+  border-radius: 50%;
+  background: var(--olive);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 28px;
+}
+
+.pillar__badge svg{width: 80px; height: 80px; fill: #1b1f28; } /* dark blue icon color */
+.pillar__badge p{
+  margin: 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #7e8185;               /* dark blue text on gold */
+}
+
+/* ===== Footer (matches screenshot) ===== */
+.footer{
+  background: var(--blue);
+  color: #e6eafb;
+  padding: 28px 0;
+  font-family: "Libre Baskerville", serif;
+  margin-top: 50px;
+}
+.footer__grid{
+  display: grid;
+  grid-template-columns: 1fr 260px 1fr; /* left / circle / right */
+  align-items: center;
+  gap: 32px;
+}
+
+/* headings */
+.footer__heading{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 14px;
+  color: #fff;
+}
+
+/* links list */
+.footer__links{ list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 12px; }
+.footer__link{
+  color: #e6eafb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 1.25rem;
+}
+.footer__link:hover{ color: var(--olive); }
+
+/* enrol button style inside footer */
+.footer__enrol{ margin-top: 10px;}
+
+/* center badge */
+.footer__center{ display: grid; place-items: center; }
+.footer__badge{
+  width: 250px; height: 250px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--olive);
+  display: grid; place-items: center;
+}
+.footer__badge img{
+  width: 100%; height: 70%; object-fit: contain;
+}
+
+/* contact items with icons */
+.footer__item{ display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
+.footer__icon{ color: #fff; line-height: 1; margin-top: 2px; }
+.footer__text{
+  margin: 0;
+  color: #e6eafb;
+  font-size: 1.1rem;
+}
+.footer__col_contact
+{
+    margin-left: 200px;
+}
+.footer a.footer__text:hover{ color: var(--olive); }
+
+/* ===== Footer bottom (icons + credit) ===== */
+.footer-bottom {
+  background: white;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+}
+
+.footer-bottom__wrap {
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.footer-icon {
+  color: var(--olive);
+  font-size: 28px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.footer-icon:hover {
+  transform: scale(1.15);
+  color: #1b1f28;
+}
+
+.footer-bottom__text p {
+  margin: 6px 0;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.1rem;
+  color: var(--olive);
+}
+
+.footer-credit {
+  color: var(--olive);
+  text-decoration: underline;
+  font-weight: 600;
+}
+.footer-credit:hover {
+  color: #1b1f28;
+}
+
+
+/* Responsiveness for mobiles */
+@media (max-width: 720px){
+  .burger
+  {
+    display:inline-flex;
+  }
+  .nav{position:fixed;inset:60px 0 0 0;background: #fff;transform:translateY(-120%);transition:transform .25s ease}
+  .nav.open{transform:translateY(0);}
+  .nav__list
+  {
+    flex-direction:column;
+    align-items:center;
+    margin: auto;
+    text-align: center;
+
+  }
+  .submenu
+  {
+    position:static;
+    display:none;
+    border:0;
+    box-shadow:none;
+    padding:0;
+    margin: 6px;
+  }
+  .submenu.open
+  {
+    display:block;
+    text-align: center;
+  }
+  .hero {
+    padding: 60px 0;
+    background-position: center;
+  }
+  .announcement
+  {
+      font-size: 0.875rem;
+  }
+  .brand__logo{height:120px}
+  .footer__grid{ grid-template-columns: 1fr; text-align: center; }
+  .footer__center{ order: 0; }         /* logo on top */
+  .footer__badge{ margin: 0 auto 8px; }
+  .footer__col_contact{ margin: auto; }
+  .footer__item{ justify-content: center;}
+  .footer__heading{ font-size: 1.5rem; }
+  .footer__link{ font-size: 1rem; }
+  .footer__text{ font-size: 1rem; }
+
+  .footer-icons { gap: 24px; }
+  .footer-icon { font-size: 24px; }
+
+  .pillars__grid{ grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* Responsiveness for Tablets */
+
+@media (min-width: 721px) and (max-width: 840px){
+  .burger
+  {
+    display:inline-flex;
+  }
+  .nav{position:fixed;inset:60px 0 0 0;background: #fff;transform:translateY(-120%);transition:transform .25s ease}
+  .nav.open{transform:translateY(0)}
+  .nav__list
+  {
+    flex-direction:column;
+    align-items:center;
+    margin: auto;
+    text-align: center;
+
+  }
+  .submenu
+  {
+    position:static;
+    display:none;
+    border:0;
+    box-shadow:none;
+    padding:0;
+    margin: 6px;
+  }
+  .submenu.open
+  {
+    display:block;
+    text-align: center;
+  }
+  .hero {
+    padding: 60px 0;
+    background-position: center;
+  }
+  .announcement
+  {
+      font-size: 0.875rem;
+  }
+  .brand__logo{height:120px}
+
+
+}
+/* footer responsiveness*/
+@media (min-width: 721px) and (max-width: 750px)
+{
+  .footer__grid{ grid-template-columns: 1fr; text-align: center;}
+  .footer__center{ order: 0; }         /* logo on top */
+  .footer__badge{ margin: 0 auto 8px; }
+  .footer__col_contact{ margin: auto; }
+  .footer__item{ justify-content: center;}
+
+  .pillars__grid{ grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (min-width: 751px) and (max-width: 900px)
+{
+  .footer__col_contact{ margin-left: 0; }
+  .footer__heading{ font-size: 1.5rem; }
+  .footer__link{ font-size: 1rem; }
+  .footer__text{ font-size: 1rem; }
+  .footer__badge{
+  width: 200px; height: 200px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px)
+{
+  .footer__col_contact{ margin-left: 50px;}
+  .footer__badge{
+  width: 200px; height: 200px;
+  }
+  /* making the circles in pillar section smaller in gap. */
+  .pillars__grid{     
+    gap: 50px;
+  }
+  .pillar__badge{
+    width: 220px;  
+    height: 220px;
+  }
+  .pillar__badge p{
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 780px)
+{
+  .pillars__grid{     
+  gap: 25px;
+  }
+  .pillar__badge p{
+    font-size: 12px;
+  }
+  .pillar__badge{
+    width: 200px;  
+    height: 200px;
+  }
+}
+
+@media (min-width: 781px) and (max-width: 900px)
+{
+  .pillars__grid{     
+  gap: 30px;
+  }
+    /* making the circles in pillar section smaller in gap. */
+  .pillar__badge{
+    width: 220px;  
+    height: 220px;
+  }
+  .pillar__badge p{
+    font-size: 13px;
+  }
+}
