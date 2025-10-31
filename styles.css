@@ -130,6 +130,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
     font-size: 25px;
     font-family: "Libre Baskerville", serif;
     font-weight: bolder;
+    color: #1b1f28;
 }
 /* making the subjects inside subject button without the text-decoration */
 .submenu
