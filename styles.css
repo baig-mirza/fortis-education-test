@@ -797,7 +797,9 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
       font-size: 0.875rem;
   }
   .brand__logo{height:120px}
-
+  .nav__link--button {
+  color: #1b1f28;
+  }
 
 }
 /* footer responsiveness*/
@@ -824,6 +826,9 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .footer__text{ font-size: 1rem; }
   .footer__badge{
   width: 200px; height: 200px;
+  }
+  .nav__link--button {
+  color: #1b1f28;
   }
 }
 
