@@ -38,3 +38,41 @@ subjectsBtn?.addEventListener('click', (e) => {
 
 // Footer year
 document.getElementById('year')?.append(new Date().getFullYear());
+
+
+
+
+// ---- Reveal on scroll (alternate left/right, slower) ----
+(function(){
+  // Ordered sections, top → bottom (continue pattern by adding more)
+  const groups = [
+    { sel: '.pillars .pillar__badge',  stagger: 250 }, // LEFT
+    { sel: '.programs .program-card',  stagger: 200 }, // RIGHT
+    { sel: '.testimonials .testi__card', stagger: 250 }, // LEFT
+    { sel: '.why .reveal', stagger: 120 }, // this section => slides from RIGHT (per alternation)
+  ];
+
+  // Observer (start a bit earlier in viewport)
+  const io = ('IntersectionObserver' in window)
+    ? new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target); // animate once
+          }
+        });
+      }, { rootMargin: '0px 0px -15%', threshold: 0.1 })
+    : null;
+
+  // Alternate direction per section: left → right → left → …
+  let useLeft = true;
+  groups.forEach(g => {
+    const items = Array.from(document.querySelectorAll(g.sel));
+    items.forEach((el, i) => {
+      el.classList.add('reveal', useLeft ? 'reveal-left' : 'reveal-right');
+      el.style.setProperty('--reveal-delay', `${i * (g.stagger ?? 250)}ms`);
+      if (io) io.observe(el); else el.classList.add('is-visible');
+    });
+    useLeft = !useLeft;
+  });
+})();
