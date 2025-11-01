@@ -753,7 +753,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   grid-template-columns: repeat(1, 1fr);
 }
   .nav__link--button {
-  color: red;
+  color: #1b1f28;
   }
 }
 
