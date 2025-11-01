@@ -188,21 +188,64 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 
 
 /* Dropdown (Subjects) */
-.has-submenu{position:relative}
-.nav__link--button{display:inline-flex;align-items:center;gap:6px;background:transparent;border:0;font:inherit;cursor:pointer;padding:8px 6px;border-radius:8px}
-.submenu{
-  position:absolute;top:calc(100% + 8px);left:0;min-width:200px;
-  background:#1b1f28;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.08);
-  padding:6px;display:none;
-  color: #d7bc1e;
+.has-submenu {
+  position: relative;
 }
-.submenu a{display:block;padding:10px 12px;border-radius:8px}
-.submenu a:hover{background:var(--soft)}
 
-/* Hover open on desktop */
-@media (hover:hover){
+.nav__link--button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+
+/* Base submenu */
+.submenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 200px;
+  background: #1b1f28;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+  padding: 6px;
+  display: none; /* hidden by default */
+  color: #d7bc1e;
+  z-index: 2000;
+}
+
+/* when opened via JS */
+.submenu.open,
+.has-submenu.open > .submenu {
+  display: block;
+}
+
+/* link styling */
+.submenu a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hover effect */
+.submenu a:hover {
+  background: var(--soft);
+}
+
+/* Desktop hover open */
+@media (hover: hover) {
   .has-submenu:hover .submenu,
-  .has-submenu:focus-within .submenu{display:block}
+  .has-submenu:focus-within .submenu {
+    display: block;
+  }
 }
 
 /* HERO — centered */
