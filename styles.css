@@ -192,8 +192,9 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 .nav__link--button{display:inline-flex;align-items:center;gap:6px;background:transparent;border:0;font:inherit;cursor:pointer;padding:8px 6px;border-radius:8px}
 .submenu{
   position:absolute;top:calc(100% + 8px);left:0;min-width:200px;
-  background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.08);
+  background:#1b1f28;border:1px solid var(--border);border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.08);
   padding:6px;display:none;
+  color: #d7bc1e;
 }
 .submenu a{display:block;padding:10px 12px;border-radius:8px}
 .submenu a:hover{background:var(--soft)}
@@ -262,6 +263,271 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   line-height: 1.5;
   color: #7e8185;               /* dark blue text on gold */
 }
+
+
+/* ===== Premium Academic Programs ===== */
+.programs{
+  background:#fff;
+  padding: 48px 0 56px;
+}
+.programs__title{
+  font-family:"Libre Baskerville", serif;
+  font-weight:700;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  color: var(--blue);
+  text-align:center;
+  margin:0 0 6px;
+}
+.programs__subtitle{
+  text-align:center;
+  color:#6b7280;
+  max-width:60ch;
+  margin:0 auto 24px;
+  font-size:.95rem;
+}
+
+.programs__grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+/* card */
+.program-card{
+  position:relative;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:20px 18px 18px;
+  box-shadow: 0 22px 36px rgba(0,0,0,.12);
+}
+.program-card__bar{
+  position:absolute;
+  top:10px; left:50%;
+  transform: translateX(-50%);
+  width: 58%;
+  height: 10px;
+  background: var(--olive);
+  border-radius: 8px;
+}
+.program-card__icon{
+  color:#1b1f28;
+  margin: 24px 0 8px;
+}
+.program-card__heading{
+  font-family:"Libre Baskerville", serif;
+  font-size: 1.15rem;
+  color: var(--blue);
+  margin: 4px 0 8px;
+}
+.program-card__blurb{
+  color:#6b7280;
+  font-size:.95rem;
+  margin:0 0 10px;
+}
+
+/* ticks list */
+.program-card__list{
+  list-style:none; margin:0 0 14px; padding:0; display:grid; gap:8px;
+}
+.program-card__list li{
+  position:relative; padding-left:22px; font-size:.95rem; color:#111827;
+}
+.program-card__list li::before{
+  content:"✓";
+  position:absolute; left:0; top:0;
+  color: var(--olive);
+  font-weight:700;
+}
+
+/* small button */
+.btn--sm{ padding:10px 18px; font-size: 0.95rem; border-radius: 999px; }
+
+/* ===== Testimonials ===== */
+.testimonials{
+  position: relative;
+  background: var(--olive);
+  padding: 36px 0 0;         /* wave adds bottom visually */
+  color: #1b1f28;
+  margin-top: 0;             /* seamless from previous section */
+}
+
+.testi__title{
+  font-family: "Libre Baskerville", serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 0 0 6px;
+  color: var(--blue);
+}
+.testi__subtitle{
+  text-align: center;
+  margin: 0 auto 24px;
+  max-width: 65ch;
+  color: #7e8185;            /* muted dark on olive */
+  font-size: .95rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* cards grid */
+.testi__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.testi__card{
+  position: relative;
+  border: 3px solid var(--blue);
+  border-radius: 12px;
+  padding: 16px 18px 22px;
+  background: transparent;   /* matches screenshot */
+}
+/* speech-bubble notch */
+.testi__card::after{
+  content:"";
+  position:absolute;
+  left: 52%;
+  bottom: -14px;
+  width: 0; height: 0;
+  transform: translateX(-50%);
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 14px solid var(--blue);   /* border outline */
+}
+.testi__card::before{
+  content:"";
+  position:absolute;
+  left: 52%;
+  bottom: -11px;
+  width: 0; height: 0;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 12px solid var(--olive);  /* fill matches background */
+}
+
+/* quote mark + stars */
+.testi__quote{
+  font-family: "Libre Baskerville", serif;
+  font-size: 34px;
+  line-height: 1;
+  color: var(--blue);
+  margin-bottom: 8px;
+}
+.testi__stars{
+  letter-spacing: 4px;
+  color: #1b1f28;            /* soft gold stars */
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.testi__text{
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.5;
+  color: #1b1f28;
+}
+
+/* bottom wave */
+.testi__wave{
+  margin-top: 34px;
+  height: 180px;
+  overflow: hidden;
+}
+.testi__wave svg{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ===== Why Fortis Education ===== */
+:root{
+  /* Optional: tweak this if you prefer the purple accent from your mock */
+  --accent: var(--olive); /* e.g., #9b7cf6 for purple */
+}
+
+.why{
+  background:#fff;
+  padding: 44px 0 56px;
+}
+
+.why__title{
+  font-family:"Libre Baskerville", serif;
+  font-weight:700;
+  text-align:center;
+  color:var(--blue);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  margin:0 0 6px;
+}
+
+.why__subtitle{
+  text-align:center;
+  color: #7e8185;
+  max-width: 65ch;
+  margin: 0 auto 22px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Big image with accent outline */
+.why__hero{
+  margin: 0 0 28px;
+  border: 3px solid var(--accent);
+  border-radius: 10px;
+  overflow:hidden;
+}
+.why__hero img{ display:block; width:100%; height:auto; }
+
+/* Text + small image on right */
+.why__grid{
+  display:grid;
+  grid-template-columns: 1.25fr auto;
+  gap: 28px;
+  align-items: start;
+}
+.why__text{ color: #7e8185; font-size:1.1rem; line-height:1.7; font-family: "Poppins", sans-serif;}
+.why__text p
+{ 
+  margin: 0 0 14px;
+}
+
+.why__media img{
+  display:block;
+  width: 300px;
+  max-width: 28vw;
+  height:auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+/* Tablet */
+@media (max-width: 960px){
+  .why__media img{ width:220px; max-width: 40vw; }
+}
+
+/* Mobile: stack; text first, image below centered */
+@media (max-width: 720px){
+  .why__grid{ grid-template-columns: 1fr; text-align:left; }
+  .why__media{ order: 2; display:grid; place-items:center; }
+  .why__media img{ width: 700px; max-width: 100%; margin-top: 6px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ===== Footer (matches screenshot) ===== */
 .footer{
@@ -375,6 +641,8 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 }
 
 
+
+
 /* Responsiveness for mobiles */
 @media (max-width: 720px){
   .burger
@@ -427,6 +695,19 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .footer-icon { font-size: 24px; }
 
   .pillars__grid{ grid-template-columns: 1fr; gap: 20px; }
+  .footer-bottom__text p 
+  {
+    font-size: 14px;
+  }
+  /*making the program cards one column on mobile*/
+  .programs__grid{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  /* testimonials grid one column on mobile */
+  .testi__grid{
+  grid-template-columns: repeat(1, 1fr);
+}
+
 }
 
 /* Responsiveness for Tablets */
@@ -482,6 +763,10 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .footer__item{ justify-content: center;}
 
   .pillars__grid{ grid-template-columns: 1fr; gap: 20px; }
+    /* testimonials grid one column on mobile */
+  .testi__grid{
+  grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (min-width: 751px) and (max-width: 900px)
@@ -541,4 +826,150 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .pillar__badge p{
     font-size: 13px;
   }
+}
+
+
+/* === Reveal on scroll (alternating left/right, slower) === */
+.reveal{
+  opacity: 0;
+  transition:
+    opacity 1.5s cubic-bezier(.2,.6,.2,1),
+    transform 1.5s cubic-bezier(.2,.6,.2,1);
+  transition-delay: var(--reveal-delay, 5ms);
+  will-change: opacity, transform;
+}
+
+/* starting offsets */
+.reveal-left  { transform: translateX(-28px); }
+.reveal-right { transform: translateX( 28px); }
+
+/* when visible */
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .reveal,
+  .reveal-left,
+  .reveal-right{
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+
+
+/* Base button styles (keep your colors, but add position + overflow) */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: 1px solid var(--border);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  overflow: hidden;            /* hides the sliding fill */
+  z-index: 0;
+  transition: transform .15s ease, box-shadow .25s ease, color .25s ease;
+}
+
+/* Primary button color and hover lift */
+.btn--primary {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.15);
+  color: #fff;
+}
+
+/* Blue sliding overlay (hidden by default) */
+.btn--primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  transform: translateX(-100%);
+  transition: transform .45s ease;
+  z-index: -1;
+}
+
+/* Slide in from left on hover */
+.btn--primary:hover::before {
+  transform: translateX(0);
+}
+
+/* keep text above overlay */
+.btn--primary > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.btn--ghost {
+  background: #fff;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  transition: transform .15s ease, box-shadow .25s ease, color .25s ease;
+}
+
+.btn--ghost::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  transform: translateX(-100%);
+  transition: transform .45s ease;
+  z-index: -1;
+}
+
+.btn--ghost:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.15);
+}
+
+.btn--ghost:hover::before {
+  transform: translateX(0);
+}
+
+
+/* Pillar circles */
+.pillar__badge{
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.pillar__badge:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0,0,0,.20);
+}
+
+/* Program cards */
+.program-card{
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.program-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 40px rgba(0,0,0,.18);
+  border-color: rgba(0,0,0,.08);
+}
+
+/* Testimonial cards */
+.testi__card{
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.testi__card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 34px rgba(0,0,0,.16);
+  border-color: #0f1420; /* a touch darker than --blue */
 }
