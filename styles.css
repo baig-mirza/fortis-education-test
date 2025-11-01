@@ -190,6 +190,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 /* Dropdown (Subjects) */
 .has-submenu {
   position: relative;
+  color: #1b1f28;
 }
 
 .nav__link--button {
@@ -202,6 +203,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   cursor: pointer;
   padding: 8px 6px;
   border-radius: 8px;
+  color: #1b1f28;
 }
 
 /* Base submenu */
