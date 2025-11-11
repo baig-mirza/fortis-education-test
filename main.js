@@ -50,6 +50,11 @@ document.getElementById('year')?.append(new Date().getFullYear());
     { sel: '.programs .program-card',  stagger: 200 }, // RIGHT
     { sel: '.testimonials .testi__card', stagger: 250 }, // LEFT
     { sel: '.why .reveal', stagger: 120 }, // this section => slides from RIGHT (per alternation)
+    { sel: '.bio-struggles .reveal', stagger: 140 },
+    { sel: '.bio-help .reveal', stagger: 120 },
+    { sel: '.tutor .reveal', stagger: 140 },
+    { sel: '.trust .reveal', stagger: 120 },
+
   ];
 
   // Observer (start a bit earlier in viewport)
@@ -75,4 +80,24 @@ document.getElementById('year')?.append(new Date().getFullYear());
     });
     useLeft = !useLeft;
   });
+})();
+
+
+
+
+// Biology subject page styling starts here: observe local reveals (keep explicit left/right classes)
+(function(){
+  const els = document.querySelectorAll('.subject-hero .reveal');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible'); // your reveal CSS handles the motion
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -15%', threshold: 0.1 });
+
+  els.forEach(el => io.observe(el));
 })();
