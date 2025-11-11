@@ -250,6 +250,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   }
 }
 
+
 /* HERO — centered */
 .hero{padding:56px 0}
 .hero__wrap{
@@ -754,7 +755,8 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 }
   .nav__link--button {
   color: #1b1f28;
-  }
+}
+
 }
 
 /* Responsiveness for Tablets */
@@ -799,7 +801,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .brand__logo{height:120px}
   .nav__link--button {
   color: #1b1f28;
-  }
+}
 
 }
 /* footer responsiveness*/
@@ -827,9 +829,10 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   .footer__badge{
   width: 200px; height: 200px;
   }
-  .nav__link--button {
+
+    .nav__link--button {
   color: #1b1f28;
-  }
+}
 }
 
 @media (min-width: 901px) and (max-width: 1200px)
@@ -1024,4 +1027,549 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   transform: translateY(-6px);
   box-shadow: 0 18px 34px rgba(0,0,0,.16);
   border-color: #0f1420; /* a touch darker than --blue */
+}
+
+
+/* Home page styling ends and biology subject page styling starts here */ 
+
+/* ===== Biology Subject Hero ===== */
+.subject-hero{
+  background: var(--blue);
+  color: #e6eafb;
+  padding: 56px 0;
+  border-top: 1px solid rgba(255,255,255,.12);   /* subtle lines like mock */
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.subject-hero__grid{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;              /* text / image */
+  gap: 32px;
+  align-items: center;
+}
+
+.subject-hero__title{
+  font-family: "Libre Baskerville", serif;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: #fff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0 0 12px;
+}
+
+.subject-hero__blurb{
+  color: #cfd7e3;
+  margin: 0 0 20px;
+  line-height: 1.7;
+  max-width: 60ch;
+}
+
+.subject-hero__media img{
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 14px;
+  border: 3px solid #fff;                         /* white border like screenshot */
+  background: #0e1521;
+  box-shadow: 0 18px 44px rgba(0,0,0,.35);
+}
+
+/* tablet */
+@media (min-width: 721px) and (max-width: 800px){
+  .subject-hero__grid{ grid-template-columns: 1fr; text-align: left; }
+  .subject-hero__media{ order: -2; }
+  .subject-hero__media img{ max-width: 700px; margin-top: 8px; }
+}
+
+@media (min-width: 801px) and (max-width: 950px){
+  .subject-hero__grid{ text-align: left; }
+  .subject-hero__media{ order: 2; }
+  .subject-hero__blurb{ font-size: 1rem;}
+  .subject-hero__media img{ max-width: 800px; }
+}
+
+/* mobile */
+@media (max-width: 720px){
+  .subject-hero{ padding: 44px 10px; margin: auto;}
+  .subject-hero__grid{ grid-template-columns: 1fr; text-align: left; }
+  .subject-hero__media{ display: grid; place-items: start; order: -2}
+  .subject-hero__media img{ max-width: 600px;}
+}
+
+
+
+
+
+
+/* ===== Struggles in Biology ===== */
+.bio-struggles{
+  background:#fff;
+  padding: 44px 0 50px;
+  margin-top: 50px;
+}
+
+.bio-struggles__title{
+  font-family:"Libre Baskerville", serif;
+  font-weight: 600;
+  text-align:center;
+  color: var(--blue);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0 0 6px;
+  text-decoration: underline;
+}
+.bio-struggles__subtitle{
+  text-align:center;
+  color: #d7bc1e;
+  max-width: 70ch;
+  margin: 0 auto 24px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Gold rounded container holding image + card */
+.bio-struggles__wrap{
+  background: var(--olive);
+  border-radius: 30px;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* card / image on desktop visual order via source */
+  margin-top: 50px;
+  align-items: center;
+  height: 600px;
+}
+
+/* White card */
+.bio-struggles__card{
+  background:#fff;
+  border: 2px solid var(--blue);
+  border-radius: 10px;
+  padding: 70px 22px;
+  height: 350px;
+}
+
+.bio-struggles__list{
+  list-style:none; margin:0; padding:0;
+  display:grid; gap: 22px;
+}
+.bio-struggles__list li{
+  display:flex; align-items:center; gap:12px;
+  color: #1b1f28; font-size:1.2rem; line-height:1.5;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.xicon{ flex: 0 0 auto; display:inline-flex; }
+
+/* Right-side image */
+.bio-struggles__media{
+  justify-self: end;
+  order: 1;                      /* image first visually */
+}
+.bio-struggles__media img{
+  display:block;
+  height: 500px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+/* making struggles in biology responsive */
+@media (max-width: 600px){
+  .bio-struggles__wrap{
+    grid-template-columns: 1fr;      /* stack */
+    text-align: left;
+    gap: 0px;
+    max-height: fit-content;
+    padding: 20px 10px;
+  }
+  .bio-struggles__media{
+    order: -1;                       /* image first on mobile */
+    justify-self: center;
+  }
+  .bio-struggles__media img{
+    height: 250px;
+    padding: 0;
+  }
+  .bio-struggles__list
+  { 
+    gap: 16px; 
+  }
+  .bio-struggles__card
+  { 
+    padding: 18px; 
+    height: auto;
+    width:fit-content;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  .bio-struggles__list li
+  {
+    font-size: 1rem;
+  }
+  .bio-struggles__subtitle
+  {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 800px){
+  .bio-struggles__wrap{
+    grid-template-columns: 1fr;      /* stack */
+    text-align: left;
+    gap: 0px;
+    max-height: fit-content;
+    padding: 20px 10px;
+  }
+  .bio-struggles__media{
+    order: -1;                       /* image first on mobile */
+    justify-self: center;
+  }
+  .bio-struggles__media img{
+    height: 300px;
+    width: 500px;
+    padding: 0;
+  }
+  .bio-struggles__list
+  { 
+    gap: 16px; 
+  }
+  .bio-struggles__card
+  { 
+    padding: 18px; 
+    height: auto;
+    width: 400px;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  .bio-struggles__list li
+  {
+    font-size: 1rem;
+  }
+  .bio-struggles__subtitle
+  {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 850px){
+  .bio-struggles__wrap{
+    padding: 0px 10px;
+  }
+  .bio-struggles__media img{
+    width: 500px;
+    padding: 0;
+  }
+  .bio-struggles__card
+  { 
+    padding: 30px; 
+    width: fit-content; 
+  }
+  .bio-struggles__media{                   /* image first on mobile */
+    justify-self: center;
+  }
+}
+
+/* ===== How We Help (Biology) ===== */
+.bio-help{
+  background:#fff;
+  padding: 44px 0 56px;
+  margin-top: 50px;
+}
+
+.bio-help__title{
+  font-family:"Libre Baskerville", serif;
+  font-weight:600;
+  text-align:center;
+  color:var(--blue);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin:0 0 6px;
+  text-decoration: underline;
+}
+.bio-help__subtitle{
+  text-align:center;
+  color:#d7bc1e; /* subtle gold like mock */
+  max-width:70ch;
+  margin:0 auto 24px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* grid */
+.bio-help__grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 24px;
+}
+
+/* card */
+.help-card{
+  background:#1b1f28;
+  color:#e6eafb;
+  border-radius:26px;
+  padding:24px;
+  min-height: 210px;
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:16px 16px;
+  align-items:start;
+  box-shadow:0 18px 36px rgba(0,0,0,.14);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.help-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 44px rgba(0,0,0,.18);
+}
+
+/* icon circle */
+.help-card__icon{
+  grid-column:1/2;
+  width:64px;height:64px;border-radius:50%;
+  background:var(--olive);
+  display:grid;place-items:center;
+  color:var(--olive);           /* SVG uses currentColor */
+  position:relative;
+  padding: 10px 10px;
+}
+.help-card__icon svg{ color:var(--olive); } /* for outer shapes */
+.help-card__icon svg *[fill="currentColor"]{ fill:var(--olive); }
+
+/* content */
+.help-card__heading{
+  grid-column:1/3;
+  font-family:"Libre Baskerville", serif;
+  font-weight:800;
+  font-size:1.05rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: white;
+}
+.help-card__text{
+  grid-column:1/3;
+  margin:0;
+  color:#d1d8e6;
+  line-height:1.6;
+  font-size:.97rem;
+}
+
+.bio-help__cta{
+  text-align:center;
+  margin-top: 22px;
+}
+
+
+
+/* responsive for bio help section */
+@media (max-width: 800px){
+  .bio-help__grid{ grid-template-columns:1fr; }
+  .help-card{ grid-template-columns:auto 1fr; }
+  .help-card__icon{ width:56px;height:56px; }
+}
+
+
+/* ===== Meet Your Tutor (full-bleed olive) ===== */
+.tutor{
+  background: var(--olive);          /* full-bleed */
+  padding: 56px 0;
+  color: #1b1f28;        
+  margin-top: 100px;            /* dark text on olive */
+}
+
+.tutor__title{
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 600;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin: 0 0 18px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: #1b1f28;
+}
+
+.tutor__grid{
+  display: grid;
+  grid-template-columns: 1.05fr 1.4fr;   /* image / text */
+  gap: 28px 36px;
+  align-items: start;
+}
+
+.tutor__media img{
+  display:block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border-radius: 22px;
+  box-shadow: 0 22px 44px rgba(0,0,0,.18);
+}
+
+.tutor__heading{
+  margin: 8px 0 20px;
+  color: #fff;                         /* white heading like mock */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  line-height: 1.25;
+}
+
+.tutor__content p{
+  margin: 0px 0 14px;
+  color: white;                 /* deep blue for body text */
+  line-height: 1.75;
+  font-size: 1.02rem;
+  font-size: "Poppins", sans-serif;
+  max-width: 68ch;
+}
+
+/* Tablet */
+@media (max-width: 850px){
+  .tutor__grid{
+    grid-template-columns: 1fr;
+  }
+  .tutor__title{
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .tutor__media{
+    order: 1;
+    display: grid;
+    place-items: center;
+  }
+  .tutor__media img{
+    max-width: 420px;
+  }
+  .tutor__content{
+    order: 2;
+    text-align: left;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 600px){
+  .tutor{ padding: 44px 0; }
+  .tutor__media img{ max-width: 320px; border-radius: 18px; }
+  .tutor__content p{ font-size: 1rem; }
+  .tutor-line-break
+  {
+    display: none;
+  }
+}
+
+
+@media (min-width: 851px) and (max-width: 1000px)
+{
+  .tutor__title
+  {
+    font-size: 2rem;
+  }
+  .tutor__heading
+  {
+    font-size: 1.2rem;
+  }
+  .tutor__content p
+  {
+    font-size: 0.90rem;
+  }
+  .tutor__media img{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
+/* ===== Why Parents Trust Us ===== */
+.trust{
+  background:#fff;
+  padding: 44px 0 56px;
+  margin-top: 100px;
+}
+
+.trust__title{
+  font-family:"Libre Baskerville", serif;
+  font-weight:600;
+  text-align:center;
+  color:var(--blue);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  margin:0 0 100px;
+}
+
+/* row layout */
+.trust__row{
+  display:grid;
+  grid-template-columns: 96px 1fr;
+  gap: 18px 150px;
+  align-items:center;
+  max-width: 900px;
+  margin: 0 auto 26px;
+  margin-bottom: 150px;
+}
+
+.trust__row.is-reverse{
+  grid-template-columns: 1fr 96px;
+}
+.trust__row.is-reverse .trust__icon{ order: 2; justify-self: end; }
+.trust__row.is-reverse .trust__body{ order: 1; text-align: left; }
+
+/* icon block */
+.trust__icon{
+  color: #d7bc1e;
+  width: 150px;
+  height: 150px;
+  border-radius:20px;
+  background: #1b1f28;
+  display:grid; place-items:center;
+  padding: 20px 20px;
+  margin-left: 20px;
+}
+/* text */
+.trust__body h3{
+  margin-bottom: 6px;
+  font-family:"Poppins", sans-serif;
+  font-weight: bolder;
+  color: #1b1f28;
+  font-size: 1.8rem;
+  text-transform:uppercase;
+}
+.trust__body p{
+  color: #d7bc1e;
+  max-width: 80ch;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+@media (max-width: 700px)
+{
+  .trust__row{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+  .trust__icon{
+    margin: 0 auto;
+  }
+  .trust__row.is-reverse .trust__icon{
+    order: 1;
+    justify-self: center;
+  }
+  .trust__row.is-reverse .trust__body{
+    order: 1;
+    text-align: center;
+  }
+  .trust__row.is-reverse
+  {
+    grid-template-columns: 1fr;
+  }
+  .trust__body h3
+  {
+    font-size: 1.2rem;
+  }
+  .trust__body p
+  {
+    font-size: 1rem;
+  }
 }
