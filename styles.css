@@ -1106,7 +1106,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 .bio-struggles{
   background:#fff;
   padding: 44px 0 50px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .bio-struggles__title{
@@ -1274,7 +1274,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 .bio-help{
   background:#fff;
   padding: 44px 0 56px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .bio-help__title{
@@ -1372,7 +1372,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
   background: var(--olive);          /* full-bleed */
   padding: 56px 0;
   color: #1b1f28;        
-  margin-top: 100px;            /* dark text on olive */
+  margin-top: 20px;            /* dark text on olive */
 }
 
 .tutor__title{
@@ -1485,7 +1485,7 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
 .trust{
   background:#fff;
   padding: 44px 0 56px;
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .trust__title{
