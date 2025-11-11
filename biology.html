@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fortis Education</title>
+  <meta name="description" content="Fortis Education — tutoring for Years 7–12 & VCE.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/c60ebee4af.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">
+    Enrolment for 2026 are now open. Enrol now to secure your spots!
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="#">
+        <img src="images/Fortis Education Final Logo.jpeg" alt="Fortis Education" class="brand__logo">
+      </a>
+
+      <button class="burger" aria-expanded="false" aria-controls="nav">
+        <span class="burger__bar"></span><span class="sr-only">Toggle menu</span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <!-- Subjects dropdown ONLY -->
+           <li><a class="nav__link" href="index.html">Home</a></li>
+          <li class="has-submenu subject-button">
+            <button class="nav__link nav__link--button" aria-haspopup="true" aria-expanded="false">
+              Subjects
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+            <ul class="submenu" role="menu">
+              <li role="none"><a role="menuitem" href="/subjects/english.html">English</a></li>
+              <li role="none"><a role="menuitem" href="/subjects/maths.html">Maths</a></li>
+              <li role="none"><a role="menuitem" href="/subjects/biology.html">Biology</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav__link" href="/contact.html">Contact</a></li>
+          <li><a class="btn btn--primary" href="/enrol.html">Enrol Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+<section class="subject-hero subject-hero--bio">
+  <div class="container subject-hero__grid">
+    <div class="subject-hero__content reveal reveal-left" style="--reveal-delay:0ms">
+      <h1 class="subject-hero__title">VCE BIOLOGY</h1>
+      <p class="subject-hero__blurb">
+        At Fortis Education, the VCE Biology tuition course explores the science
+        of life through engaging lessons that simplify complex biological
+        concepts. Our VCE Biology program helps students master VCE key knowledge
+        areas from genetics and cellular processes to evolution and human physiology.
+        With structured notes, data analysis practice, and exam-style assessments,
+        students gain the confidence and understanding needed to excel in both SACs
+        and final exams.
+      </p>
+      <a href="/enrol.html" class="btn btn--primary">Enrol Now</a>
+    </div>
+
+    <div class="subject-hero__media reveal reveal-right" style="--reveal-delay:120ms" aria-hidden="true">
+      <img src="images/biology header image.png" alt="">
+    </div>
+  </div>
+</section>
+
+
+<section class="bio-struggles">
+  <div class="container">
+    <h2 class="bio-struggles__title">STRUGGLES IN BIOLOGY</h2>
+    <p class="bio-struggles__subtitle">
+      VCE Biology demands both strong memory and analytical skills. Understanding the
+      challenges students face is the first step toward mastering the subject with confidence.
+    </p>
+
+    <div class="bio-struggles__wrap">
+      <!-- Right-side image (on mobile it appears first) -->
+      <figure class="bio-struggles__media reveal reveal-right" aria-hidden="true">
+        <img src="images/bio-struggles.png" alt="">
+      </figure>
+
+      <!-- Left white card with red X bullets -->
+      <div class="bio-struggles__card reveal reveal-left">
+        <ul class="bio-struggles__list">
+          <li>
+            <span class="xicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <circle cx="12" cy="12" r="11" fill="#ef4444"/>
+                <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Memorising Large Amounts of Content</span>
+          </li>
+          <li>
+            <span class="xicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <circle cx="12" cy="12" r="11" fill="#ef4444"/>
+                <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Applying Knowledge to Exam Questions</span>
+          </li>
+          <li>
+            <span class="xicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <circle cx="12" cy="12" r="11" fill="#ef4444"/>
+                <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Interpreting Data and Diagrams</span>
+          </li>
+          <li>
+            <span class="xicon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22">
+                <circle cx="12" cy="12" r="11" fill="#ef4444"/>
+                <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span>Managing Time in Exams</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="bio-help" id="how-we-help">
+  <div class="container">
+    <h2 class="bio-help__title">HOW WE HELP</h2>
+    <p class="bio-help__subtitle">
+      Every child learns differently. We provide the care, structure, and support they need to thrive.
+    </p>
+
+    <div class="bio-help__grid">
+      <!-- Card 1 -->
+      <article class="help-card reveal reveal-left">
+        <div class="help-card__icon">
+          <!-- calendar -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M480 576L192 576C139 576 96 533 96 480L96 160C96 107 139 64 192 64L496 64C522.5 64 544 85.5 544 112L544 400C544 420.9 530.6 438.7 512 445.3L512 512C529.7 512 544 526.3 544 544C544 561.7 529.7 576 512 576L480 576zM192 448C174.3 448 160 462.3 160 480C160 497.7 174.3 512 192 512L448 512L448 448L192 448zM224 216C224 229.3 234.7 240 248 240L424 240C437.3 240 448 229.3 448 216C448 202.7 437.3 192 424 192L248 192C234.7 192 224 202.7 224 216zM248 288C234.7 288 224 298.7 224 312C224 325.3 234.7 336 248 336L424 336C437.3 336 448 325.3 448 312C448 298.7 437.3 288 424 288L248 288z"/></svg>
+        </div> <br>
+        <h3 class="help-card__heading">
+          SIMPLIFIED EXPLANATIONS<br>&amp; SUMMARIES
+        </h3>
+        <p class="help-card__text">
+          We break complex biological concepts into clear, easy to understand explanations supported by structured notes.
+        </p>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="help-card reveal reveal-right">
+        <div class="help-card__icon">
+          <!-- paper/pen -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M439.4 96L448 96C483.3 96 512 124.7 512 160L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 160C128 124.7 156.7 96 192 96L200.6 96C211.6 76.9 232.3 64 256 64L384 64C407.7 64 428.4 76.9 439.4 96zM376 176C389.3 176 400 165.3 400 152C400 138.7 389.3 128 376 128L264 128C250.7 128 240 138.7 240 152C240 165.3 250.7 176 264 176L376 176zM256 320C256 302.3 241.7 288 224 288C206.3 288 192 302.3 192 320C192 337.7 206.3 352 224 352C241.7 352 256 337.7 256 320zM288 320C288 333.3 298.7 344 312 344L424 344C437.3 344 448 333.3 448 320C448 306.7 437.3 296 424 296L312 296C298.7 296 288 306.7 288 320zM288 448C288 461.3 298.7 472 312 472L424 472C437.3 472 448 461.3 448 448C448 434.7 437.3 424 424 424L312 424C298.7 424 288 434.7 288 448zM224 480C241.7 480 256 465.7 256 448C256 430.3 241.7 416 224 416C206.3 416 192 430.3 192 448C192 465.7 206.3 480 224 480z"/></svg>
+        </div>
+        <h3 class="help-card__heading">EXAM-FOCUSED PRACTICE</h3>
+        <p class="help-card__text">
+          Students regularly tackle VCE-style questions and mock assessments to strengthen application skills.
+        </p>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="help-card reveal reveal-left">
+        <div class="help-card__icon">
+          <!-- lightbulb -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"/></svg>
+        </div>
+        <h3 class="help-card__heading">DATA &amp; GRAPH INTERPRETATION SESSIONS</h3>
+        <p class="help-card__text">
+          Dedicated sessions help students confidently analyse experiments, visuals, and scientific data.
+        </p>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="help-card reveal reveal-right">
+        <div class="help-card__icon">
+          <!-- target -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 320C512 214 426 128 320 128C214 128 128 214 128 320C128 426 214 512 320 512C426 512 512 426 512 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 400C364.2 400 400 364.2 400 320C400 275.8 364.2 240 320 240C275.8 240 240 275.8 240 320C240 364.2 275.8 400 320 400zM320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320C176 240.5 240.5 176 320 176zM288 320C288 302.3 302.3 288 320 288C337.7 288 352 302.3 352 320C352 337.7 337.7 352 320 352C302.3 352 288 337.7 288 320z"/></svg>
+        </div>
+        <h3 class="help-card__heading">TIME-MANAGEMENT STRATEGIES</h3>
+        <p class="help-card__text">
+          Our tutors teach proven techniques to plan and complete exam responses efficiently.
+        </p>
+      </article>
+    </div>
+
+    <div class="bio-help__cta">
+      <a href="/enrol.html" class="btn btn--primary">Enrol Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="tutor" id="meet-your-tutor">
+  <div class="container tutor__grid">
+    <h2 class="tutor__title">MEET YOUR TUTOR</h2>
+
+    <figure class="tutor__media reveal reveal-left" aria-label="Tutor photo">
+      <img src="images/bio tutor.jpeg" alt="Evind — VCE Biology Tutor at Fortis Education">
+    </figure>
+
+    <div class="tutor__content reveal reveal-right">
+      <h3 class="tutor__heading">
+        Hello I’m Evind. Your Fortis Education<br class="tutor-line-break"> VCE Biology tutor.
+      </h3>
+
+      <p>With over 20 years of teaching experience and a strong passion for the life sciences, I’ve dedicated my career to helping students truly understand and enjoy Biology. Over the years, I’ve guided hundreds of students many of whom have gone on to become successful doctors, researchers, and health professionals.</p>
+
+      <p>As a VCAA Biology assessor, I also bring valuable insight into what examiners look for and how students can maximise their marks in SACs and final exams. My approach blends clarity, structure, and exam-focused strategies to help students not only grasp key concepts but also apply them effectively under pressure. At Fortis, my goal is simple; to help every student unlock their potential and achieve their best possible outcome in VCE Biology.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="trust" id="why-parents-trust-us">
+  <div class="container">
+    <h2 class="trust__title">WHY PARENTS TRUST US?</h2>
+
+    <!-- Row 1 -->
+    <div class="trust__row">
+      <div class="trust__icon reveal reveal-left" aria-hidden="true">
+        <!-- trophy -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M208.3 64L432.3 64C458.8 64 480.4 85.8 479.4 112.2C479.2 117.5 479 122.8 478.7 128L528.3 128C554.4 128 577.4 149.6 575.4 177.8C567.9 281.5 514.9 338.5 457.4 368.3C441.6 376.5 425.5 382.6 410.2 387.1C390 415.7 369 430.8 352.3 438.9L352.3 512L416.3 512C434 512 448.3 526.3 448.3 544C448.3 561.7 434 576 416.3 576L224.3 576C206.6 576 192.3 561.7 192.3 544C192.3 526.3 206.6 512 224.3 512L288.3 512L288.3 438.9C272.3 431.2 252.4 416.9 233 390.6C214.6 385.8 194.6 378.5 175.1 367.5C121 337.2 72.2 280.1 65.2 177.6C63.3 149.5 86.2 127.9 112.3 127.9L161.9 127.9C161.6 122.7 161.4 117.5 161.2 112.1C160.2 85.6 181.8 63.9 208.3 63.9zM165.5 176L113.1 176C119.3 260.7 158.2 303.1 198.3 325.6C183.9 288.3 172 239.6 165.5 176zM444 320.8C484.5 297 521.1 254.7 527.3 176L475 176C468.8 236.9 457.6 284.2 444 320.8z"/></svg>
+      </div>
+      <div class="trust__body reveal reveal-right">
+        <h3>PROVEN TRACK RECORD OF RESULTS</h3>
+        <p>Consistently helping students achieve top scores and significant grade improvements each term.</p>
+      </div>
+    </div>
+
+    <!-- Row 2 (reversed) -->
+    <div class="trust__row is-reverse">
+      <div class="trust__icon reveal reveal-right" aria-hidden="true">
+        <!-- chat bubble -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 416L64 192C64 139 107 96 160 96L480 96C533 96 576 139 576 192L576 416C576 469 533 512 480 512L360 512C354.8 512 349.8 513.7 345.6 516.8L230.4 603.2C226.2 606.3 221.2 608 216 608C202.7 608 192 597.3 192 584L192 512L160 512C107 512 64 469 64 416z"/></svg>
+      </div>
+      <div class="trust__body reveal reveal-left">
+        <h3>PARENT COLLABORATION &amp; UPDATES</h3>
+        <p>Regular communication keeps parents informed about progress, strengths, and areas for improvement.</p>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="trust__row">
+      <div class="trust__icon reveal reveal-left" aria-hidden="true">
+        <!-- users -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+      </div>
+      <div class="trust__body reveal reveal-right">
+        <h3>SMALL CLASSES FOR MAXIMUM ATTENTION</h3>
+        <p>Limited students per class to ensure every learner receives the focus and guidance they deserve.</p>
+      </div>
+    </div>
+
+    <!-- Row 4 (reversed) -->
+    <div class="trust__row is-reverse">
+      <div class="trust__icon reveal reveal-right" aria-hidden="true">
+        <!-- lightbulb -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="currentColor"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M420.9 448C428.2 425.7 442.8 405.5 459.3 388.1C492 353.7 512 307.2 512 256C512 150 426 64 320 64C214 64 128 150 128 256C128 307.2 148 353.7 180.7 388.1C197.2 405.5 211.9 425.7 219.1 448L420.8 448zM416 496L224 496L224 512C224 556.2 259.8 592 304 592L336 592C380.2 592 416 556.2 416 512L416 496zM312 176C272.2 176 240 208.2 240 248C240 261.3 229.3 272 216 272C202.7 272 192 261.3 192 248C192 181.7 245.7 128 312 128C325.3 128 336 138.7 336 152C336 165.3 325.3 176 312 176z"/></svg>
+      </div>
+      <div class="trust__body reveal reveal-left">
+        <h3>MODERN LEARNING TOOLS &amp; RESOURCES</h3>
+        <p>Interactive digital resources, visual explanations, and online support enhance student engagement.</p>
+      </div>
+    </div>
+
+    <!-- Row 5 -->
+    <div class="trust__row">
+      <div class="trust__icon reveal reveal-left" aria-hidden="true">
+        <!-- growth chart -->
+        <svg viewBox="0 0 24 24" width="120" height="120">
+          <rect x="3" y="14" width="3" height="7" fill="currentColor"/>
+          <rect x="9" y="11" width="3" height="10" fill="currentColor"/>
+          <rect x="15" y="8" width="3" height="13" fill="currentColor"/>
+          <path d="M3 9l5-3 4 2 7-5" stroke="#1b1f28" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="trust__body reveal reveal-right">
+        <h3>GROWTH–FOCUSED LEARNING ENVIRONMENT</h3>
+        <p>A motivating, distraction-free space where students are encouraged to ask, explore, and excel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <!-- Left: Quick Links -->
+    <div class="footer__col">
+      <h3 class="footer__heading">Quick Links</h3>
+      <ul class="footer__links">
+        <li><a href="/" class="footer__link">Home</a></li>
+        <li><a href="/subjects/english.html" class="footer__link">Subjects</a></li>
+        <li><a href="/contact.html" class="footer__link">Contact Us</a></li>
+      </ul>
+      <a href="/enrol.html" class="btn btn--primary footer__enrol">Enrol Now</a>
+    </div>
+
+    <!-- Middle: Logo in gold ring -->
+    <div class="footer__center">
+      <div class="footer__badge">
+        <img src="images/Fortis Education Final Logo.jpeg" alt="Fortis Education" />
+      </div>
+    </div>
+
+    <!-- Right: Contact -->
+    <div class="footer__col_contact">
+      <h3 class="footer__heading">Contact</h3>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- mail icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16v12H4z"/><path d="M22 6l-10 7L2 6"/>
+          </svg>
+        </span>
+        <a href="mailto:admin@fortis.com" class="footer__text">admin@fortis.com</a>
+      </div>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- phone icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.6 2.49a2 2 0 0 1-.45 2.11L9 10a16 16 0 0 0 5 5l.68-1.15a2 2 0 0 1 2.11-.45c.79.28 1.63.48 2.49.6A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        <a href="tel:+61404923405" class="footer__text">+61&nbsp;450&nbsp;577&nbsp;533</a>
+      </div>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- location icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>
+          </svg>
+        </span>
+        <p class="footer__text">
+          57 Hoppers Crossing,
+          Level 2,
+          Melbourne VIC 3029
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="container footer-bottom__wrap">
+    <div class="footer-icons">
+      <a href="#" aria-label="Facebook" class="footer-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="footer-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:admin@fortis.com" aria-label="Email" class="footer-icon">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-bottom__text">
+      <p>© <span id="year"></span> FORTIS Education</p>
+      <p>Made by <a href="#" class="footer-credit">Mirza Web Designs</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="main.js" defer></script>
+</body>
+</html>
