@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fortis Education</title>
+  <meta name="description" content="Fortis Education — tutoring for Years 7–12 & VCE.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/c60ebee4af.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="announcement">
+    Enrolment for 2026 are now open. Enrol now to secure your spots!
+  </div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html">
+        <img src="images/Fortis Education Final Logo.jpeg" alt="Fortis Education" class="brand__logo">
+      </a>
+
+      <button class="burger" aria-expanded="false" aria-controls="nav">
+        <span class="burger__bar"></span><span class="sr-only">Toggle menu</span>
+      </button>
+
+      <nav id="nav" class="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <!-- Subjects dropdown ONLY -->
+           <li><a class="nav__link" href="index.html">Home</a></li>
+          <li class="has-submenu subject-button">
+            <button class="nav__link nav__link--button" aria-haspopup="true" aria-expanded="false">
+              Subjects
+              <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </button>
+            <ul class="submenu" role="menu">
+              <li role="none"><a role="menuitem" href="english.html">English</a></li>
+              <li role="none"><a role="menuitem" href="maths.html">Maths</a></li>
+              <li role="none"><a role="menuitem" href="biology.html">Biology</a></li>
+              <li role="none"><a role="menuitem" href="physics.html">Physics</a></li>
+              <li role="none"><a role="menuitem" href="chemistry.html">Chemistry</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav__link" href="/contact.html">Contact</a></li>
+          <li><a class="btn btn--primary" href="https://forms.gle/u2j4z2xdAJ8ueiKb6">Enrol Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="contact-page">
+  <!-- LEFT SIDE -->
+  <div class="contact-left">
+    <img src="images/contact-image.png" alt="Contact Us Graphic" class="contact-left__img">
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="contact-right">
+    <div class="contact-item reveal reveal-left">
+      <div class="contact-icon">
+        <!-- Email Icon -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+          <path d="M4 4h16v16H4z"/>
+          <path d="M4 4l8 8 8-8"/>
+        </svg>
+      </div>
+      <p class="contact-text">fortiseducationcentre@gmail.com</p>
+    </div>
+
+    <hr class="contact-divider">
+
+    <div class="contact-item reveal reveal-right">
+      <div class="contact-icon">
+        <!-- Phone Icon -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+          <path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 1 4.18 2 2 0 0 1 3 2h4.09A2 2 0 0 1 9 3.72a12.8 12.8 0 0 0 .7 2.06 2 2 0 0 1-.45 2.11L7.91 9.09a16 16 0 0 0 7 7l1.19-1.34a2 2 0 0 1 2.11-.45 12.4 12.4 0 0 0 2.06.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <p class="contact-text">+61 450 577 533</p>
+    </div>
+
+    <hr class="contact-divider">
+
+    <div class="contact-item reveal reveal-left">
+      <div class="contact-icon">
+        <!-- Location Icon -->
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="#fff">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 .001-5.001A2.5 2.5 0 0 1 12 11.5z"/>
+        </svg>
+      </div>
+      <p class="contact-text">
+        Level 2, Suite 11<br>
+        57 Hoppers Crossing,<br>
+        Melbourne VIC 3029
+      </p>
+    </div>
+
+    <hr class="contact-divider-last">
+  </div>
+</section>
+
+
+<section class="contact-gallery">
+  <div class="container contact-gallery__grid">
+    <!-- Top left image -->
+    <figure class="contact-gallery__item contact-gallery__item--top">
+      <img src="images/contact collage1.png" alt="Tutor working with a student">
+    </figure>
+
+    <!-- Tall image on the right (spans both rows) -->
+    <figure class="contact-gallery__item contact-gallery__item--tall">
+      <img src="images/contact collage3.png" alt="Teacher with students looking at a globe">
+    </figure>
+
+    <!-- Bottom left wide image -->
+    <figure class="contact-gallery__item contact-gallery__item--bottom">
+      <img src="images/contact collage2.png" alt="Fortis Education building exterior">
+    </figure>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <footer class="footer">
+  <div class="container footer__grid">
+    <!-- Left: Quick Links -->
+    <div class="footer__col">
+      <h3 class="footer__heading">Quick Links</h3>
+      <ul class="footer__links">
+        <li><a href="/" class="footer__link">Home</a></li>
+        <li id="scrollToTopBtn"><a class="footer__link">Subjects</a></li>
+        <li><a href="contact.html" class="footer__link">Contact Us</a></li>
+      </ul>
+      <a href="https://forms.gle/u2j4z2xdAJ8ueiKb6" class="btn btn--primary footer__enrol">Enrol Now</a>
+    </div>
+
+    <!-- Middle: Logo in gold ring -->
+    <div class="footer__center">
+      <div class="footer__badge">
+        <img src="images/Fortis Education Final Logo.jpeg" alt="Fortis Education" />
+      </div>
+    </div>
+
+    <!-- Right: Contact -->
+    <div class="footer__col_contact">
+      <h3 class="footer__heading">Contact</h3>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- mail icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16v12H4z"/><path d="M22 6l-10 7L2 6"/>
+          </svg>
+        </span>
+        <a href="mailto:admin@fortis.com" class="footer__text">admin@fortis.com</a>
+      </div>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- phone icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.09 5.18 2 2 0 0 1 5 3h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.6 2.49a2 2 0 0 1-.45 2.11L9 10a16 16 0 0 0 5 5l.68-1.15a2 2 0 0 1 2.11-.45c.79.28 1.63.48 2.49.6A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </span>
+        <a href="tel:+61404923405" class="footer__text">+61&nbsp;450&nbsp;577&nbsp;533</a>
+      </div>
+
+      <div class="footer__item">
+        <span class="footer__icon" aria-hidden="true">
+          <!-- location icon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 21s-6-5.33-6-10a6 6 0 1 1 12 0c0 4.67-6 10-6 10z"/><circle cx="12" cy="11" r="2"/>
+          </svg>
+        </span>
+        <p class="footer__text">
+          57 Hoppers Crossing,
+          Level 2,
+          Melbourne VIC 3029
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <div class="container footer-bottom__wrap">
+    <div class="footer-icons">
+      <a href="#" aria-label="Facebook" class="footer-icon">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" aria-label="Instagram" class="footer-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="mailto:admin@fortis.com" aria-label="Email" class="footer-icon">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer-bottom__text">
+      <p>© <span id="year"></span> FORTIS Education</p>
+      <p>Made by <a href="#" class="footer-credit">Mirza Web Designs</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="main.js" defer></script>
+</body>
+</html>
