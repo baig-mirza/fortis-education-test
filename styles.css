@@ -1573,3 +1573,181 @@ h1,h2,h3{font-family:"Libre Baskerville", serif;color:var(--blue);margin:0 0 10p
     font-size: 1rem;
   }
 }
+.chem-tutor-pararaph
+{
+  text-align: center;
+  margin: auto;
+}
+.chemistry-tutor__heading
+{
+    text-align: center;
+    margin: auto;
+}
+.chemistry-tutor__content p{
+  margin: 50px auto;
+  color: white;                 /* deep blue for body text */
+  line-height: 1.75;
+  font-size: 1.02rem;
+  font-size: "Poppins", sans-serif;
+  max-width: 68ch;
+  text-align: center;
+}
+.chem-tutor__grid{  /* image / text */
+  text-align: center;
+}
+/* ===== CONTACT PAGE ===== */
+
+.contact-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+/* LEFT SIDE (gold) */
+.contact-left {
+  background-color: #d7bc1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.contact-left__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT SIDE (navy panel) */
+.contact-right {
+  background: #1b1f28;
+  padding: 60px 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-icon svg {
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  line-height: 1.4;
+}
+
+.contact-divider {
+  border: none;
+  border-bottom: 1px solid #3c4452;
+  margin: 10px 0 24px;
+}
+
+.contact-divider-last {
+  border: none;
+  border-bottom: 2px solid #fff;
+  margin-top: 20px;
+}
+
+/* ===== Contact Page Gallery ===== */
+.contact-gallery{
+  background:#fff;
+  padding: 32px 0 48px;
+}
+
+.contact-gallery__grid{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 10px;
+}
+
+/* Base image styling */
+.contact-gallery__item img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+/* Grid positions */
+.contact-gallery__item--top{
+  grid-column:1 / 2;
+  grid-row:1 / 2;
+}
+
+.contact-gallery__item--bottom{
+  grid-column:1 / 2;
+  grid-row:2 / 3;
+}
+
+.contact-gallery__item--tall{
+  grid-column:2 / 3;
+  grid-row:1 / 3;       /* span both rows */
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left__img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .contact-right {
+    padding: 40px 24px;
+  }
+
+  .contact-text {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  .contact-gallery__grid{
+    grid-template-columns:1fr;
+  }
+  .contact-gallery__item--tall,
+  .contact-gallery__item--top,
+  .contact-gallery__item--bottom{
+    grid-column:auto;
+    grid-row:auto;
+  }
+  .contact-gallery__item img{
+    height:auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-text {
+    font-size: 0.80rem;
+  }
+
+  .contact-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+  .contact-left__img {
+    width: 80%;
+  }
+}
+.footer_subjects
+{
+  color: #e6eafb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 1.25rem;
+  padding: 0;
+}
