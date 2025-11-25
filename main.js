@@ -54,6 +54,7 @@ document.getElementById('year')?.append(new Date().getFullYear());
     { sel: '.bio-help .reveal', stagger: 120 },
     { sel: '.tutor .reveal', stagger: 140 },
     { sel: '.trust .reveal', stagger: 120 },
+    { sel: '.contact-page .reveal', stagger: 120 },
 
   ];
 
@@ -101,3 +102,25 @@ document.getElementById('year')?.append(new Date().getFullYear());
 
   els.forEach(el => io.observe(el));
 })();
+
+
+
+
+
+
+
+
+
+
+
+// Get the button element by its ID
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Add an event listener for the 'click' event
+scrollToTopBtn.addEventListener("click", function() {
+    // Scroll the window to the top (y=0) using smooth behavior
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
